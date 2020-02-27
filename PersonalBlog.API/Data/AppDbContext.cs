@@ -16,6 +16,7 @@ namespace PersonalBlog.API.Data
         public DbSet<Attachment> Attachments { get; set; }
         public DbSet<CommentReply> CommentReplies { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<User> Users { get; set; }
 
         // protected override void  OnModelCreating(ModelBuilder builder)
         // {
