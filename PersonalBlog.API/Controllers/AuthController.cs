@@ -46,6 +46,7 @@ namespace PersonalBlog.API.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
+            // throw new Exception("Computer Says No!");
             var userFropRepo = await _authRepo.Login(userForLoginDto.UserName, userForLoginDto.Password);
             if(userFropRepo == null)
             return Unauthorized();

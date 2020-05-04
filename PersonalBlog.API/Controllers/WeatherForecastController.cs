@@ -25,7 +25,7 @@ namespace PersonalBlog.API.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
+        [HttpGet("weathers")]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();

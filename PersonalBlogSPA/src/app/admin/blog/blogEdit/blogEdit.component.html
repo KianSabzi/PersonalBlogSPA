@@ -1,0 +1,78 @@
+<div class="wrapper">
+  <div class="content-wrapper">
+    <div class="container">
+      <h4 class="text-center">مقاله جدید</h4>
+    </div>
+    <div class="container my-3">
+      <div class="tab-panel">
+        <form #editForm="ngForm" (ngSubmit)="updatePost();">
+          <tabset>
+            <tab heading="اطلاعات اولیه">
+              <div class="form-group mt-3">
+                <label for="title">عنوان مقاله : </label>
+                <input
+                  type="text"
+                  name="title"
+                  [(ngModel)]="post.title"
+                  class="form-control"
+                  id="PostTitle"
+                />
+              </div>
+              <div class="form-group">
+                <label for="slug">نامک : </label>
+                <input
+                  type="text"
+                  name="slug"
+                  [(ngModel)]="post.slug"
+                  class="form-control"
+                  id="postSlug"
+                />
+              </div>
+              <div class="form-group">
+                <label for="author">نویسنده/ مترجم : </label>
+                <input
+                  type="text"
+                  name="author"
+                  [(ngModel)]="post.author"
+                  class="form-control"
+                  placeholder="نام نویسنده یا مترجم مقاله"
+                  id="postAuthor"
+                />
+              </div>
+              <div class="form-group">
+                <label for="articleSource">منبع : </label>
+                <input
+                  type="text"
+                  name="articleSource"
+                  [(ngModel)]="post.articleSource"
+                  class="form-control"
+                  placeholder="منبع مقاله در صورت وجود"
+                  id="postSource"
+                />
+              </div>
+            </tab>
+            <tab heading="اطلاعات تکمیلی">
+              <div class="form-group mt-3">
+                <label for="text"> متن مقاله : </label>
+                <ckeditor
+                 
+                  name="text"
+                  [(ngModel)]="post.text"
+                  type="divarea"
+                ></ckeditor>
+              </div>
+              <div class="form-group">
+                <label for="tags"> تگ های موضوع : </label>
+                <tag-input class="form-control" name="tags" [(ngModel)]="post.tags" [editable]='true'
+                 [displayBy]="'value'">
+                </tag-input>
+              </div>
+            </tab>
+          </tabset>
+          <button type="submit" class="btn btn-primary">بروز رسانی</button>
+          <button [routerLink]="['../../blogManagement']" class="btn btn-default mr-3">انصراف</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,238 @@
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a [routerLink]="['../admin/admin-panel']" routerLinkActive="router-link-active"  class="brand-link">
+      <img src="../../assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">پنل مدیریت</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar" style="direction: ltr">
+      <div style="direction: rtl">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="../../assets/dist/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">کیان سبزی</a>
+          </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+                 with font-awesome or any other icon font library -->
+            <li class="nav-item has-treeview menu-open">
+              <a class="nav-link active">
+                <i class="nav-icon fa fa-book"></i>
+                <p>
+                  مدیریت مطالب
+                  <i class="right fa fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a [routerLink]="['../admin/blog/blogManagement']"  class="nav-link">
+                    <i class="fa fa-circle-o nav-icon"></i>
+                    <p>لیست آخرین مطالب</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a  [routerLink]="['../admin/blog/blogCreate']" class="nav-link">
+                    <i class="fa fa-circle-o nav-icon"></i>
+                    <p>ایجاد مقاله تازه</p>
+                  </a>
+                </li>
+                
+              </ul>
+            </li>
+
+            <li class="nav-item has-treeview">
+              <a class="nav-link active">
+                <i class="nav-icon fa fa-comments-o"></i>
+                <p>
+                  مدیریت نظرات
+                  <i class="right fa fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a [routerLink]="['../admin/blog/blogManagement']"  class="nav-link">
+                    <i class="fa fa-circle-o nav-icon"></i>
+                    <p>لیست نظرات</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a  [routerLink]="['../admin/blog/blogCreate']" class="nav-link">
+                    <i class="fa fa-circle-o nav-icon"></i>
+                    <p>تایید نظرات جدید</p>
+                  </a>
+                </li>
+                
+              </ul>
+            </li>
+
+            <li class="nav-item has-treeview">
+              <a class="nav-link active">
+                <i class="nav-icon fa fa-folder"></i>
+                <p>
+                  مدیریت فایل ها
+                  <i class="right fa fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a [routerLink]="['../admin/file-manager']"  class="nav-link">
+                    <i class="fa fa-circle-o nav-icon"></i>
+                    <p>لیست فایل ها</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a   class="nav-link">
+                    <i class="fa fa-circle-o nav-icon"></i>
+                    <p>آپلود فایل جدید</p>
+                  </a>
+                </li>
+                
+              </ul>
+            </li>
+
+            <li class="nav-item has-treeview">
+              <a class="nav-link active">
+                <i class="nav-icon fa fa-users"></i>
+                <p>
+                  مدیریت کاربران
+                  <i class="right fa fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a [routerLink]="['../admin/blog/blogManagement']"  class="nav-link">
+                    <i class="fa fa-circle-o nav-icon"></i>
+                    <p>لیست کاربران</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a  [routerLink]="['../admin/blog/blogCreate']" class="nav-link">
+                    <i class="fa fa-circle-o nav-icon"></i>
+                    <p>لیست نقش های سیستم</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a  [routerLink]="['../admin/blog/blogCreate']" class="nav-link">
+                    <i class="fa fa-circle-o nav-icon"></i>
+                    <p>ایجاد کاربر جدید</p>
+                  </a>
+                </li>
+                
+              </ul>
+            </li>
+
+            <li class="nav-item has-treeview">
+              <a class="nav-link active">
+                <i class="nav-icon fa fa-trademark"></i>
+                <p>
+                  مدیریت تبلیغات
+                  <i class="right fa fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a [routerLink]="['../admin/blog/blogManagement']"  class="nav-link">
+                    <i class="fa fa-circle-o nav-icon"></i>
+                    <p>لیست تبلیغات</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a  [routerLink]="['../admin/blog/blogCreate']" class="nav-link">
+                    <i class="fa fa-circle-o nav-icon"></i>
+                    <p>تعریف تبلیغ جدید</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a  [routerLink]="['../admin/blog/blogCreate']" class="nav-link">
+                    <i class="fa fa-circle-o nav-icon"></i>
+                    <p>مدیریت مکان های تبلیغ</p>
+                  </a>
+                </li>
+                
+              </ul>
+            </li>
+           
+            <li class="nav-item has-treeview">
+              <a class="nav-link active">
+                <i class="nav-icon fa fa-tv"></i>
+                <p>
+                  مدیریت سیستم
+                  <i class="right fa fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a [routerLink]="['../admin/blog/blogManagement']"  class="nav-link">
+                    <i class="fa fa-circle-o nav-icon"></i>
+                    <p>تنظیمات سامانه</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a  [routerLink]="['../admin/blog/blogCreate']" class="nav-link">
+                    <i class="fa fa-circle-o nav-icon"></i>
+                    <p>مدیریت صفحات</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a  [routerLink]="['../admin/blog/blogCreate']" class="nav-link">
+                    <i class="fa fa-circle-o nav-icon"></i>
+                    <p>مدیریت منوها</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a  [routerLink]="['../admin/blog/blogCreate']" class="nav-link">
+                    <i class="fa fa-circle-o nav-icon"></i>
+                    <p>مدیریت پاورقی</p>
+                  </a>
+                </li>
+                
+              </ul>
+            </li>
+
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fa fa-edit"></i>
+                <p>
+                  فرم‌ها
+                  <i class="fa fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/forms/general.html" class="nav-link">
+                    <i class="fa fa-circle-o nav-icon"></i>
+                    <p>اجزا عمومی</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/forms/advanced.html" class="nav-link">
+                    <i class="fa fa-circle-o nav-icon"></i>
+                    <p>پیشرفته</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/forms/editors.html" class="nav-link">
+                    <i class="fa fa-circle-o nav-icon"></i>
+                    <p>ویشرایشگر</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+    </div>
+    <!-- /.sidebar -->
+  </aside>

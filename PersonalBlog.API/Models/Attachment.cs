@@ -1,9 +1,14 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace PersonalBlog.API.Models
 {
    public enum MediaType{
-        image,
-        video,
-        other
+        [Display(Name = "تصویر")]
+        image = 1,
+        [Display(Name = "ویدئو")]
+        video = 2,
+        [Display(Name = "سایر")]
+        other = 3
     }
     public class Attachment
     {

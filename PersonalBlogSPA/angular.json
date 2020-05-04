@@ -21,11 +21,14 @@
             "assets": [
               "src/favicon.ico",
               "src/assets"
+              
             ],
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/alertifyjs/build/alertify.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -74,7 +77,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/alertifyjs/build/alertify.min.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"

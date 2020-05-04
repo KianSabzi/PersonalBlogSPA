@@ -20,10 +20,18 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
+    "@auth0/angular-jwt": "^2.0.0",
+    "@syncfusion/ej2-angular-filemanager": "^18.1.46",
+    "alertifyjs": "^1.13.1",
     "bootstrap": "^4.1.1",
+    "ckeditor4-angular": "^1.1.0",
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
+    "hbootstrap4rtl": "^1.0.4",
+    "ngx-bootstrap": "^3.0.1",
+    "ngx-chips": "^2.1.0",
     "rxjs": "^6.0.0",
+    "vazir-font": "^23.0.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

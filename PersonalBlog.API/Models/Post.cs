@@ -6,7 +6,7 @@ namespace PersonalBlog.API.Models
 {
     public class Post
     {
-         public int Id { get; set; }
+        public int Id { get; set; }
         [Required]
         [StringLength(150,MinimumLength = 3)]
         public string Title { get; set; }

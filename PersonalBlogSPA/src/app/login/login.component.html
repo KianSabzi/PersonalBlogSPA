@@ -1,0 +1,26 @@
+<div class="container mt-5" style="max-width: 450px;text-align:center" >
+
+  <form #loginForm="ngForm" class="form-signin" (ngSubmit)="login()">
+    <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    <h1 class="h5 mb-3 font-weight-normal">لطفا اطلاعات کاربری خود را وارد کنید</h1>
+    
+    <label for="inputEmail" class="sr-only">نام کاربری</label>
+    <input type="email" name="username" id="inputEmail" class="form-control"
+    placeholder="نام کاربری یا ایمیل" [(ngModel)]="model.username"
+    required="نام کاریری را وارد کنید" autofocus="">
+    
+    <label for="inputPassword" class="sr-only">رمز عبور</label>
+    <input type="password" name="password" id="inputPassword" class="form-control mt-2" 
+    placeholder="رمز عبور" [(ngModel)]="model.password" 
+    required="رمز عبور را وارد کنید">
+    
+    <div class="checkbox mt-3 mb-3" style="float: right;">
+      <label>
+        <input type="checkbox" value="remember-me"> به خاطر سپردن
+      </label>
+    </div>
+    <button [disabled] ="!loginForm.valid" class="btn btn-lg btn-primary btn-block" type="submit">ورود</button>
+    <p class="mt-5 mb-3 text-muted">1398©</p>
+  </form>
+ 
+</div>

@@ -53,11 +53,11 @@ namespace PersonalBlog.API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("AutherEmail")
+                    b.Property<string>("AuthorEmail")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("AutherName")
+                    b.Property<string>("AuthorName")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("CommentDate")
@@ -68,57 +68,23 @@ namespace PersonalBlog.API.Migrations
                         .HasColumnType("TEXT")
                         .HasMaxLength(250);
 
-                    b.Property<bool>("IsAdmin")
-                        .HasColumnType("INTEGER");
-
                     b.Property<bool>("IsApproved")
                         .HasColumnType("INTEGER");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("PostId")
+                    b.Property<int>("ParentCommentId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasMaxLength(50);
+                    b.Property<int>("PostId")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
                     b.HasIndex("PostId");
 
                     b.ToTable("Comments");
-                });
-
-            modelBuilder.Entity("PersonalBlog.API.Models.CommentReply", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("AdminReply")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("CommentId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("ReplyAutherName")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("ReplyContent")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("ReplyTime")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CommentId");
-
-                    b.ToTable("CommentReplies");
                 });
 
             modelBuilder.Entity("PersonalBlog.API.Models.Message", b =>
@@ -241,15 +207,6 @@ namespace PersonalBlog.API.Migrations
                     b.HasOne("PersonalBlog.API.Models.Post", "Post")
                         .WithMany("Comments")
                         .HasForeignKey("PostId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("PersonalBlog.API.Models.CommentReply", b =>
-                {
-                    b.HasOne("PersonalBlog.API.Models.Comment", "Comment")
-                        .WithMany("CommentReplies")
-                        .HasForeignKey("CommentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

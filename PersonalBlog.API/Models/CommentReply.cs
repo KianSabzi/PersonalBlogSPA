@@ -6,7 +6,7 @@ namespace PersonalBlog.API.Models
     public class CommentReply
     {
          public int Id { get; set; }
-        public string ReplyAutherName { get; set; }
+        public string ReplyAuthorName { get; set; }
         [Required]
         public string ReplyContent { get; set; }
         [DataType(DataType.DateTime)]
