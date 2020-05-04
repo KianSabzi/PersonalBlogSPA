@@ -23,7 +23,7 @@
     "@auth0/angular-jwt": "^2.0.0",
     "@syncfusion/ej2-angular-filemanager": "^18.1.46",
     "alertifyjs": "^1.13.1",
-    "bootstrap": "^4.1.1",
+    "bootstrap": "^4.3.1",
     "ckeditor4-angular": "^1.1.0",
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
